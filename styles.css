@@ -1,0 +1,124 @@
+html {
+    font-size: 14px;
+}
+
+:root {
+    --main-red-color: #e06262;
+    --main-black-color: #484848;
+    --light-red-color: #e77878;
+}
+
+.main-red-color{
+    color: var(--main-red-color);
+}
+
+.light-red-color{
+    color: var(--light-red-color);
+}
+
+.main-black-color{
+    color: var(--main-black-color);
+}
+
+input[type=text] {
+    background: #c4c4c4;
+    width: 100%;
+    height: 10px;
+    padding: 10px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    background: #ffffff;
+    border: 1px solid var(--main-red-color);
+    outline: none;
+}
+
+.container{
+    margin:0 auto;
+    background-color: #ffffff;
+}
+
+.page {
+    background: #f2eecb;
+    padding: 10px 20px 10px 20px;
+    width: 293px;
+    height: 100vh;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.frame {
+    border: 1px solid var(--main-black-color);
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-form {
+    padding: 16px;
+  }
+
+.col {
+    display: flex;
+    justify-content: between;
+}
+
+.input-group {
+    display: inline-flex;
+    margin: 5px 0;
+}
+
+.btn {
+    background-color: var(--main-red-color); /* Red */
+    border: none;
+    color: white;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 4px;
+    border-radius: 4px;
+  }
+
+.btn:hover{
+    background-color: var(--light-red-color);
+    cursor: pointer;
+}
+
+.form-group {
+    display: flex;
+    justify-content: left;
+}
+
+.list {
+    display: block;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.list-item {
+    padding: .5rem 1.25rem;
+}
+
+.list-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: .25rem;
+}
+
+.list-group-items {
+    list-style-type: none;
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    border: 1px solid var(--main-red-color);
+}
