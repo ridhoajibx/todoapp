@@ -3,7 +3,7 @@
   }
   
   :root {
-    --primary-color: #5333e4;
+    --primary-color: #3182ce;
     --main-red-color: #e06262;
     --main-black-color: #484848;
   }
@@ -69,6 +69,21 @@
     display: flex;
     flex-direction: column;
   }
+
+  .header {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .header-title {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 52%; */
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Satisfy", sans-serif;
+  }
+  
   
   .add {
     padding: 16px;
