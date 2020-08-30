@@ -11,6 +11,9 @@ todoForm.addEventListener("submit", addTodo);
 // ini adalah event untuk meyelesaikan todo
 todoList.addEventListener("click", isComplete);
 
+// ini adalah event untuk delete todo
+todoList.addEventListener("click", deleteTodo);
+
 
 // Reuseable codes w/ funtion (refactor)
 function createTodosElement(value) {
@@ -18,13 +21,14 @@ function createTodosElement(value) {
     const li = document.createElement("li");
     li.className = "todo-text";
 
+    //create  elemen P (first child from li)
     const p = document.createElement("p");
     p.className = "todo-item"
     p.innerHTML = (todoInput.value)
 
     li.appendChild(p);
 
-    //create  anchor delete (second child)
+    //create  anchor delete (second child from li)
     const a = document.createElement("a");
     a.href = "#";
     a.className = "delete-todo add-btn main-red-color";
@@ -48,5 +52,18 @@ function addTodo(e) {
 
 function isComplete(e) {
     const checked = e.target.classList.toggle('checked');
-    e.target.tagName === 'P' ? checked: null ;
+    e.target.tagName === 'P' ? checked: null;
+}
+
+function deleteTodo(e) {
+    e.preventDefault();
+    const clearTodo = e.target.classList.contains("delete-todo");
+    // conditional for delete todo
+    if (clearTodo) {
+        // show alert
+        if (confirm(`Are you sure to delete?`)) {
+            const parent = e.target.parentElement;
+            parent.remove();
+        }
+    }
 }
