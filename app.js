@@ -8,6 +8,9 @@ const todoList = document.querySelector("#todo-list");
 // ini adalah event untuk menambahkan todo
 todoForm.addEventListener("submit", addTodo);
 
+// ini adalah event untuk meyelesaikan todo
+todoList.addEventListener("click", isComplete);
+
 
 // Reuseable codes w/ funtion (refactor)
 function createTodosElement(value) {
@@ -33,7 +36,7 @@ function createTodosElement(value) {
 }
 
 function addTodo(e) {
-    e.preventDefault();
+    e.preventDefault();   
     if (todoInput.value) {
         createTodosElement(todoInput.value);
 
@@ -41,4 +44,9 @@ function addTodo(e) {
     } else {
         alert("Todo cannot empty!");
     }
+}
+
+function isComplete(e) {
+    const checked = e.target.classList.toggle('checked');
+    e.target.tagName === 'P' ? checked: null ;
 }
